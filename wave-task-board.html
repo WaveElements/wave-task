@@ -1,0 +1,48 @@
+<link rel="import" href="wave-task.html">
+
+<!--
+`<wave-task-board>`
+Веб компонент для отображения доски с карточками задач.  
+Имеет несколько режимов.
+
+### Сеткa
+
+[выполненые][ день ][запланированые]  
+[выполненые][неделя][запланированые]  
+[выполненые][ месяц][запланированые]  
+
+### Детальный вид задачи
+### Выбор даты
+### Проекты
+### Настройка
+
+
+@demo demo/index.html
+-->
+
+<dom-module id="wave-task-board">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    class WaveTaskBoard extends WaveTask {
+      static get is() { return 'wave-task-board'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'wave-task-board'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(WaveTaskBoard.is, WaveTaskBoard);
+  </script>
+</dom-module>

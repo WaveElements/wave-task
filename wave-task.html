@@ -1,0 +1,51 @@
+<link rel="import" href="../polymer/polymer.html">
+
+
+<!--
+`wave-task`
+Веб компонент для описания класса WaveTask
+
+Структура класса `Task`
+```
+  {
+    "done": "true",
+    "title": "string",
+    "titleDone": "string",
+    "description": "string",
+    "date": {
+      "created": "TS",
+      "done": "TS"
+    },
+
+  }
+```
+
+@demo demo/index.html
+-->
+
+<dom-module id="wave-task">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    class WaveTask extends Polymer.Element {
+      static get is() { return 'wave-task'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'wave-task'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(WaveTask.is, WaveTask);
+  </script>
+</dom-module>

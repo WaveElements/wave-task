@@ -1,0 +1,40 @@
+<link rel="import" href="wave-task.html">
+
+<!--
+`wave-task-card`
+Веб компонент для отображения карточки задачи
+
+При изменении статуса `done` меняет стиль и строку
+Имеет минимальные размеры
+Конфигурируется через атрибут `task` 
+
+
+@demo demo/index.html
+-->
+
+<dom-module id="wave-task-card">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    class WaveTaskCard extends WaveTask {
+      static get is() { return 'wave-task-card'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'wave-task-card'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(WaveTaskCard.is, WaveTaskCard);
+  </script>
+</dom-module>

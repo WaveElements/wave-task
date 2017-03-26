@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>wave-task demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../wave-task.html">
+    <link rel="import" href="../wave-task-board.html">
+    <link rel="import" href="../wave-task-card.html">
+    
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic wave-task demo</h3>
+      <demo-snippet>
+        <template>
+          <wave-task></wave-task>
+        </template>
+      </demo-snippet>
+      <demo-snippet>
+        <template>
+          <wave-task-card></wave-task-card>
+        </template>
+      </demo-snippet>
+      <demo-snippet>
+        <template>
+          <wave-task-board></wave-task-board>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
